@@ -3,7 +3,7 @@ import random
 employes = {}
 def key_generator():
         def generate_key():
-            yield int((random.random()*1000)+1000)
+            yield int((random.randint(1000,9999)))
         key_gen = generate_key()
         key = next(key_gen)
         return key

@@ -1,0 +1,8 @@
+f = open("abc.txt","a+")
+msg = input("Enter your msg:")
+f.write(msg+" ")
+f.close()
+f = open("abc.txt","r")
+f_msg = f.read()
+f.close()
+print(f"Msg from file: {f_msg}")
