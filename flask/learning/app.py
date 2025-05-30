@@ -1,4 +1,4 @@
-from flask import Flask, redirect, url_for
+from flask import Flask, redirect, url_for, render_template
 
 # Initialize the Flask application
 app = Flask(__name__)
@@ -7,10 +7,7 @@ app = Flask(__name__)
 # Define a route
 @app.route("/")
 def hello():
-    return """
-            <h1 style= "text-align:center">Welcome To Flask App</h1>
-            <a href="http://127.0.0.1:5000/contact">contact</a>
-        """
+    return render_template("home.html", title="Home", name="Piyush")
 
 
 @app.route("/contact")
